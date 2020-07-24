@@ -5,7 +5,7 @@ require("./models/todo");
 require('./models/user')
 exports.connect = () => {
   mongoose.connect(
-    "mongodb+srv://komsomolradio:irkytsk87@cluster0.melez.gcp.mongodb.net/todo?retryWrites=true&w=majority",
+    "mongodb+srv:",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -21,7 +21,7 @@ exports.connect = () => {
 
 exports.initSessionStore = () => {
     const store = new MongoDBStore({
-        uri: "mongodb+srv://komsomolradio:irkytsk87@cluster0.melez.gcp.mongodb.net/todo?retryWrites=true&w=majority",
+        uri: "mongodb+srv:",
         collection: "portfolio-sessions",
     });
     return store;
